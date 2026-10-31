@@ -11,6 +11,13 @@
 <body>
     <nav class="navbar">
         <div class="logo">FRONTEND</div>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
         <ul class="nav-links">
             <li><a href="#">Início</a></li>
             <li><a href="#">Conteúdo</a></li>
@@ -29,7 +36,7 @@
             </div>
             <div class="hero-imagem">
                 <img src="images/hero-illustration.svg" alt="Ilustração de programação">
-            </div> 
+            </div>
         </section>
 
         <section class="conteudo">
@@ -55,7 +62,8 @@
             <div class="depoimentos-grid">
                 <div class="depoimento">
                     <img src="images/aluno1.jpg" alt="Foto do aluno João">
-                    <p>"Aprender frontend ficou muito mais fácil com esse projeto. Agora consigo criar minhas próprias páginas!"</p>
+                    <p>"Aprender frontend ficou muito mais fácil com esse projeto. Agora consigo criar minhas próprias
+                        páginas!"</p>
                     <span>João Pereira</span>
                 </div>
                 <div class="depoimento">
@@ -92,7 +100,41 @@
                 </div>
             </div>
         </section>
+
+        <section class="aprendizados">
+            <div class="tit">
+                <h2>Como Funciona o Aprendizado</h2>
+                <P>Veja o passo a passo que você vai seguir para dominar o desenvolvimento Frontend.</P>
+            </div>
+            <div class="aprendizado-grid">
+                <div class="aprendizado-card">
+                    <h3>Fundamentos de HTML</h3>
+                    <p>Aprenda a estruturar páginas com semântica, acessibilidade e boas práticas.</p>
+                </div>
+                <div class="aprendizado-card">
+                    <h3>Estilização com CSS</h3>
+                    <p>Crie layouts modernos com cores, fontes, espaçamentos e responsividade.</p>
+                </div>
+                <div class="aprendizado-card">
+                    <h3>Interatividade com JavaScript</h3>
+                    <p>Adicione vida à sua página com eventos, manipulação de DOM e lógica de programação.</p>
+                </div>
+                <div class="aprendizado-card">
+                    <h3>Projeto Final</h3>
+                    <p>Coloque tudo em prática desenvolvendo um site completo e visualmente atrativo.</p>
+                </div>
+            </div>
+        </section>
     </main>
+    <script>
+        const toggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            navLinks.classList.toggle("show");
+        });
+    </script>
 </body>
 
 </html>
